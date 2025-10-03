@@ -23,6 +23,8 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .menu ul{
