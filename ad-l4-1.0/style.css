@@ -2,29 +2,26 @@ html {
   height: 100%;
   width: 100%;
 }
-
-body {
-  font-family: sans-serif;
-  margin: 20px;
+/* Sticky Footer con Flexbox */
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
-/* Footer fijo siempre abajo */
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+}
+
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
   background-color: #000;
   color: #fff;
-  padding: 1rem;
   text-align: center;
-  font-family: sans-serif;
-  font-size: 0.9rem;
-  box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
-  z-index: 1000;
-}
-
-/* Espacio extra para que el contenido no quede tapado por el footer */
-body {
-  padding-bottom: 100px; /* Ajusta según la altura de tu footer */
+  padding: 2rem 1rem;
 }
