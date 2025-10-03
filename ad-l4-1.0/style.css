@@ -187,3 +187,32 @@ main p {
   margin: 30px auto;
   /* Centra la imagen horizontalmente */
 }
+footer {
+    display: flex;                 
+    justify-content: space-between;
+    align-items: center;           
+    padding: 20px 30px;            
+    background-color: #4D5D73;     
+    border-top: 1px solid #1e3a5f; 
+    margin: 0 auto;
+}
+
+
+.footer-links a {
+    color: #c8d6f7;
+    text-decoration: none;
+    display: block;        
+    margin-bottom: 8px;    
+    font-size: 16px;
+}
+
+
+.footer-logo img {
+    width: 80px;      
+    height: auto;
+}
+.autores-container ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    margin: 0;
+    padding: 0;
+}
