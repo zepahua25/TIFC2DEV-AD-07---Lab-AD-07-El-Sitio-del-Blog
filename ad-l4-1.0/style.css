@@ -1,10 +1,119 @@
-html {
+
+/* Sticky Footer con Flexbox */
+html, body {
   height: 100%;
-  width: 100%;
   margin: 0;
-  font-family: sans-serif;
-  background-color: #000;
+    font-family: sans-serif;
+    background-color: #000; 
 }
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+   
+
+  nav{
+    background-color: #656BFF;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+  }
+
+  .logo img{
+    height: 90px;
+  }
+
+  .menu{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .menu ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+
+
+  .menu ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  .menu ul li a:hover{
+    color: #ff00ff;
+    text-shadow: 0 0 5px #ff00ff,
+                 0 0 10px #00ffff,
+                 0 0 20px #ffff00;
+  }
+
+  .menu ul li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ff00ff, #00ffff, #ffff00);
+    transition: width 0.3s ease;
+  }
+
+  .menu ul li a:hover::after{
+    width: 100%;
+  }
+
+   .search {
+      display: flex;
+      align-items: center;  /* centra verticalmente input y botón */
+      gap: 8px;
+    }
+
+    .search input {
+      padding: 8px 12px;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      font-size: 14px;
+      background-color: #222;
+      color: #fff;
+    }
+
+    .search input::placeholder {
+      color: #aaa;
+    }
+
+    .search button {
+      
+      border: none;
+      color: #111;
+      font-weight: bold;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    .search button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #ff00ff,
+                  0 0 15px #00ffff,
+                  0 0 20px #ffff00;
+    }
 
 nav {
   background-color: #656BFF;
@@ -17,6 +126,19 @@ nav {
   z-index: 1000;
 }
 
+main {
+  flex: 1;
+  padding: 2rem;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
+  z-index: 1000;
 .logo img {
   height: 90px;
 }
