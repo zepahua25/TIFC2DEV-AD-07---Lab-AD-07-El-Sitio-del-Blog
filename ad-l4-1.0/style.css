@@ -1,11 +1,189 @@
 html {
   height: 100%;
   width: 100%;
-  background: color #090f26;;
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #000;
 }
 
-body {
-  font-family:sans-serif;
-  margin: 20px;
+nav {
+  background-color: #656BFF;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  padding: 10px 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
+.logo img {
+  height: 90px;
+}
+
+.menu {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+  color: #ff00ff;
+  text-shadow: 0 0 5px #ff00ff,
+    0 0 10px #00ffff,
+    0 0 20px #ffff00;
+}
+
+.menu ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ff00ff, #00ffff, #ffff00);
+  transition: width 0.3s ease;
+}
+
+.menu ul li a:hover::after {
+  width: 100%;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  /* centra verticalmente input y botón */
+  gap: 8px;
+}
+
+.search input {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background-color: #222;
+  color: #fff;
+}
+
+.search input::placeholder {
+  color: #aaa;
+}
+
+.search button {
+
+  border: none;
+  color: #111;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.search button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #ff00ff,
+    0 0 15px #00ffff,
+    0 0 20px #ffff00;
+}
+
+
+body {
+  background-color: #0a192f;
+  color: #c8d6f7;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding-bottom: 100px;
+  /* Espacio extra para que el footer no tape el contenido */
+}
+
+/* Contenedor que centra la página y añade el borde */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 30px;
+}
+
+.title {
+  text-align: center;
+  color: white;
+}
+
+.content {
+  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+
+
+.banner {
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+/* 1. Añade el borde azul al contenedor principal */
+.container {
+  border: 2px;
+}
+
+/* 2. Estilos para los títulos de tu página */
+main h1,
+main h2 {
+  text-align: center;
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* 3. Estilos para los párrafos de tu página */
+main p {
+  text-align: justify;
+  line-height: 1.6;
+  font-size: 14px;
+  color: #c8d6f7;
+}
+
+/* 4. Estilos para las imágenes de contenido */
+.content-image {
+  display: block;
+  /* Asegura que la imagen sea un bloque */
+  max-width: 60%;
+  height: auto;
+  margin: 30px auto;
+  /* Centra la imagen horizontalmente */
 }
